@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <img src="images/skeleton.gif" id="skeleton" alt="Running Skeleton">
+
+    <div id="wrapper">
+        <header>
+            <nav>
+                <ul class="nav-grid">
+                    <li><a href="https://cyber-craft.shop/products/helldivers-2-b-01-armor">Costumes</a></li>
+                    <li><a href="https://www.snackworks.com/brands/sour-patch-kids/">Candy</a></li>
+                    <li><a href="https://www.spirithalloween.com/category/decorations/1005.uts">Decorations</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=BgFxeAq126g">Spooky</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Happy Halloween</h1>
+            <img src="images/halloween.png">
+            <section>
+                <h2>Pumpkins</h2>
+                <p>Pumpkins are the glowing heart of Halloween, carved into jack-o’-lanterns to light the night. Their orange glow welcomes trick-or-treaters and keeps away wandering spirits. </p>
+            </section>
+            <section>
+                <h2>Bats</h2>
+                <p>Bats flutter through the moonlit sky, symbols of mystery and the supernatural. Their silent wings and shadowy forms make them a classic companion to haunted nights.</p>
+            </section>
+            <section>
+                <h2>Skeletons</h2>
+                <p>Skeletons dance through the dark, rattling bones in eerie delight. They remind us that Halloween celebrates both the spooky and the playful side of life and death.</p>
+            </section>
+        </main>
+        <footer>
+            Happy Halloween &copy; 1513
+        </footer>
+    </div>
+</body>
+
+</html>
+
+<script>
+  const mainImg = document.querySelector('main img');
+  const skeleton = document.getElementById('skeleton');
+
+  mainImg.addEventListener('click', () => {
+    skeleton.style.display = 'block';      // make visible
+    skeleton.style.transition = 'none';    // reset animation
+    skeleton.style.transform = 'none';     // reset position
+
+    // Force reflow to restart transition
+    void skeleton.offsetWidth;
+
+    // Animate from top-left to bottom-right
+    skeleton.style.transition = 'transform 3s linear';
+    skeleton.style.transform = 'translate(90vw, 90vh)'; // moves across screen
+
+    // Hide after animation
+    setTimeout(() => {
+      skeleton.style.display = 'none';
+      skeleton.style.transform = 'none';
+    }, 3100);
+  });
+</script>

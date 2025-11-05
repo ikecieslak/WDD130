@@ -1,0 +1,83 @@
+/* Add your CSS here to style your halloween page */
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barrio&display=swap');
+body {
+    background-color: #130912;
+    font-family: "Amatic SC";
+    color: white;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #B14622;
+    padding: 20px 0;
+    border-bottom: 5px solid #F7921E;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto); /* 4 equal columns for 4 items */
+  gap: 20px; /* space between items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* center horizontally */
+  align-items: center;
+}
+
+.nav-grid li a {
+  text-decoration: none;
+  color: white;
+  background-color: #3E1C34;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.nav-grid li a:hover {
+  background-color: #602748;
+}
+
+main h1, main h2 {
+    font-family: "Barrio";
+}
+
+main img {
+  display: block;
+  margin: 20px auto;
+  width: 500px;        /* you can adjust this size */
+  height: 500px;       /* should match width to stay circular */
+  border-radius: 50%;  /* makes it a circle */
+  border: 5px solid #F7921E;
+  object-fit: cover;   /* keeps the image from stretching */
+}
+
+main {
+  text-align: center; /* keeps the heading centered */
+}
+
+main section {
+  display: inline-block; /* treat each section like a small box */
+  vertical-align: top; /* keeps tops aligned */
+  color: white;
+  background-color: #B14622;
+  border: 5px solid #F7921E;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+}
+
+#skeleton {
+  position: absolute;
+  top: -100px;    /* start slightly off-screen */
+  left: -100px;
+  width: 150px;   /* size of the skeleton */
+  display: none;  /* hidden until triggered */
+  pointer-events: none; /* prevent interfering with clicks */
+  z-index: 10;
+  transition: transform 3s linear; /* smooth movement */
+}

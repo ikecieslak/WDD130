@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Nova+Oval&display=swap');
+
+body {
+    font-size: 22px;
+    background-image: url("../images/scales.png");
+    font-family: "Nova Oval";
+    text-decoration: none;
+    background-color: #04724D;
+}
+
+h1, h2, .realms-container {
+    font-family: "Metamorphous";
+}
+
+*,
+::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* === HEADER/NAV SECTION === */
+header {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    background: transparent;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    background: rgba(4, 114, 77, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+    position: relative;
+}
+
+.nav--list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    margin: 0 10px;
+    border: 2px solid #FFD275;
+    overflow: hidden;
+}
+
+.item a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFD275;
+    z-index: 10;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.item:hover a {
+    color: #D14624;
+}
+
+.item:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transform: skew(30deg);
+    background: #FFD275;
+    transition: width 400ms ease;
+}
+
+.item:hover:before {
+    width: 120%;
+}
+
+.item:nth-child(2):before {
+    transform: skew(-20deg);
+}
+
+.item:nth-child(3):before {
+    transform: skew(0deg);
+}
+
+.item:nth-child(4):before {
+    width: 180px;
+    height: 0%;
+    bottom: 0px;
+    transition: height 400ms ease;
+}
+
+.item:nth-child(4):hover:before {
+    height: 100%;
+}
+
+#logo_link {
+    border: none;
+    overflow: visible;
+}
+
+#logo_link:before {
+    display: none;
+}
+
+.logo {
+    height: 130px;
+    width: auto;
+    position: relative;
+    top: 5px;
+    z-index: 20;
+}
+
+/* === HERO SECTION === */
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero-box {
+    width: 100%;
+    height: 100%;
+}
+
+#hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#hero-msg {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.home-title {
+  color: #FFD275;
+  background: rgba(4, 114, 77, 0.9);
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-family: "Metamorphous", serif;
+}
+
+/* === MAIN SECTION === */
+
+main {
+  position: relative;
+  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+main p {
+  width: min(90%, 30em);
+  background: rgba(4, 114, 77, 0.9);
+  color: #FFD275;
+  padding: 1em;
+  border-radius: 8px;
+  font-family: "Nova Oval", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+/* === REALMS SECTION === */
+#realms {
+  text-align: center;
+  padding: 4em 1em;
+}
+
+#realms h2 {
+  font-family: "Metamorphous", serif;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  color: #FFD275;
+}
+
+#realms > p {
+  max-width: 600px;
+  margin: 0 auto 2em auto;
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #FFD275;
+}
+
+.realms-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 3em;
+  justify-items: center;
+  align-items: start;
+  text-decoration: none;
+  color: inherit;
+}
+
+.me-realm, .ice-realm, .wwr-realm, .add-realm {
+  text-align: center;
+}
+
+.realm-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#me-img {
+    border: 6px solid #A1E44D;
+}
+
+#ice-img {
+    border: 6px solid #9CF6F6;
+}
+
+#wwr-img {
+    border: 6px solid #0081A7;
+}
+
+#add-img {
+    border: 6px solid #D14624;
+}
+
+#me-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px 6px #A1E44D, 0 0 50px 10px #D0F2A6;
+}
+
+#ice-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px 6px #9CF6F6, 0 0 50px 10px #CEFBFB;
+}
+
+#wwr-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px 6px #0081A7, 0 0 50px 10px #80C0D3;
+}
+
+#add-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px 6px #D14624, 0 0 50px 10px orange;
+}
+
+.realms-container p {
+  margin-top: 0.75em;
+  color: #FFD275;
+  font-family: "Nova Oval", sans-serif;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+/* === CONTACT/TABLE SECTION === */
+
+#dragon-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding: 3em 1em;
+  justify-content: center;
+}
+
+.dragon-table h2, .dragon-table p {
+    color: #FFD275;
+}
+
+.dragon-table {
+  flex: 1 1 400px;
+}
+
+.dragon-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.dragon-table thead {
+    background-color: #FFD275;
+}
+
+.dragon-table th, .dragon-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #FFD275;
+}
+
+.dragon-table tr.fire {
+  background-color: #FF8C42;
+}
+
+.dragon-table tr.ice {
+  background-color: #9CF6F6;
+}
+
+.dragon-table tr.nature {
+  background-color: #A1E44D;
+}
+
+.dragon-form {
+  flex: 1 1 400px;
+  background-image: url('../images/scroll_background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2em;
+  border-radius: 10px;
+  color: #FFD275;
+}
+
+.dragon-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.dragon-form input[type="text"],
+.dragon-form input[type="email"],
+.dragon-form textarea {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #FFD275;
+  font-family: "Nova Oval", sans-serif;
+  font-size: 1em;
+}
+
+.dragon-form input[type="submit"] {
+  background-color: #D14624;
+  color: #FFD275;
+  border: none;
+  padding: 0.75em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.dragon-form input[type="submit"]:hover {
+  background-color: #FF8C42;
+}
+
+/* === FOOTER SECTION === */
+
+footer {
+    background-color: #04724D;
+    color: #FFD275;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+footer a {
+    color: #FFD275;
+    text-decoration: none;
+}
+
+.social {
+    text-align: center;
+}
+
+.social_icon {
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+}
