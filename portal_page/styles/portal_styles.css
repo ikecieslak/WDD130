@@ -287,6 +287,15 @@ main p {
   text-decoration: none;
 }
 
+#cold {
+    border: 6px solid #9CF6F6;
+}
+
+#cold:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px 6px #9CF6F6, 0 0 50px 10px #CEFBFB;
+}
+
 /* === CONTACT/TABLE SECTION === */
 
 #dragon-contact {
